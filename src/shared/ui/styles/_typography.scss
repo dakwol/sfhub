@@ -1,0 +1,29 @@
+@use "./variables" as *;
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $font-family-base;
+    color: $color-primary;
+    margin: 0 0 $spacing-sm;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 1.75rem;
+    font-weight: semi-bold;
+}
+
+p {
+    font-size: $font-size-base;
+    line-height: 1.5;
+    margin: 0 0 $spacing-md;
+    color: $color-white;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}

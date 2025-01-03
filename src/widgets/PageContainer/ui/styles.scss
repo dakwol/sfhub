@@ -1,0 +1,91 @@
+@use "@shared/ui/styles" as *;
+
+.pageContainer {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  padding: 22px;
+  overflow: hidden;
+
+  .containerMenu {
+    display: flex;
+    position: relative;
+    height: 100%;
+  }
+  
+  .resizeContainer {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -5px; /* Создаем область для перетаскивания */
+    width: 10px;
+    z-index: 1;
+    height: 100%;
+    border-radius: $border-radius-lg;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: ew-resize;
+
+    &.isDragging{
+      &::after{
+        opacity: 1;
+      }
+    }
+
+    &:hover{
+      &::after{
+        opacity: 1;
+      }
+    }
+    
+    &::after{
+      content: '';
+      right: -5px; 
+      width: 10px;
+      opacity: 0;
+      height: 4%;
+      border-radius: $border-radius-lg;
+      cursor: ew-resize;
+      background-color: $color-secondary;
+      transition: .2s ease-in-out;
+    }
+  }
+  
+
+  .containerContent {
+    background-color: $color-bg-blue;
+    border-radius: 22px;
+    height: 100%;
+    width: 100%;
+    box-shadow: $box-shadow-dark;
+    overflow: hidden;
+  }
+}
+
+.contentWrapper {
+  position: relative;
+  height: 100%;
+}
+
+.fade-enter {
+  opacity: 0;
+  transform: translateY(20%);
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transform: translateY(0%);
+  transition: opacity 400ms ease-in-out, transform 400ms ease-in-out;
+}
+
+.fade-exit {
+  opacity: 1;
+  transform: translateY(0%);
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transform: translateY(-20%);
+  transition: opacity 400ms ease-in-out, transform 400ms ease-in-out;
+}

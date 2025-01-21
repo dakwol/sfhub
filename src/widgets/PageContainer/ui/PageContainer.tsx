@@ -28,14 +28,22 @@ const PageContainer: FC<Props> = ({ contentLeft, contentRight }) => {
         
       >
         <div onMouseDown={startDragging} className={`resizeContainer ${isDragging && 'isDragging'}`}></div>
-        {contentLeft}
+        <CSSTransition
+          in={showContent}
+          timeout={500}
+          classNames="fade"
+          unmountOnExit
+        >
+          {contentLeft}
+        </CSSTransition>
+        
         <Navigation position={menuWidth <= 12 && 'top-center'}/>
       </div>
       
       <div className='containerContent'>
         <CSSTransition
           in={showContent}
-          timeout={500}
+          timeout={700}
           classNames="fade"
           unmountOnExit
         >

@@ -4,13 +4,16 @@
   display: flex;
   height: 100%;
   width: 100%;
-  padding: 22px;
   overflow: hidden;
 
   .containerMenu {
     display: flex;
     position: relative;
     height: 100%;
+    padding: 16px;
+    background-color: $color-background;
+    border-top-left-radius: 22px;
+    border-bottom-left-radius: 22px;
   }
   
   .resizeContainer {
@@ -52,14 +55,16 @@
     }
   }
   
-
   .containerContent {
-    background-color: $color-bg-blue;
-    border-radius: 22px;
+    background-color: rgba($color: $color-white, $alpha: 0.2);
+    filter: blur(45);
+    border-top-right-radius: 22px;
+    border-bottom-right-radius: 22px;
     height: 100%;
     width: 100%;
     box-shadow: $box-shadow-dark;
     overflow: hidden;
+    padding: 16px;
   }
 }
 

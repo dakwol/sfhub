@@ -1,0 +1,26 @@
+@use "@shared/ui/styles" as *;
+
+.userMenuContainer { 
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+
+    .userAvatarNameContainer{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 4px;
+        
+        .userName {
+            //TODO добавить стиили шрифтов
+        }
+        .userNickName {
+            //TODO добавить стиили шрифтов
+        }
+    }
+}

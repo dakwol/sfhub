@@ -24,6 +24,8 @@
     "baseUrl": "./",
     "paths": {
       "@widgets/*": ["src/widgets/*"],
+      "@features/*": ["src/features/*"],
+      "@atoms/*": ["src/atoms/*"],
       "@shared/*": ["src/shared/*"]
     }
   },

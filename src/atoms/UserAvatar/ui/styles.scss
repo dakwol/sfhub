@@ -1,0 +1,17 @@
+@use "@shared/ui/styles" as *;
+
+.userAvatarContainer { 
+    width: 120px;
+    height: 120px;
+    border-radius: 100px;
+    border: 4px solid $color-primary;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .userAvatarImage { 
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
